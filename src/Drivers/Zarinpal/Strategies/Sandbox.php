@@ -128,6 +128,7 @@ class Sandbox extends Driver
 
         $client = new \SoapClient($this->getVerificationUrl(), ['encoding' => 'UTF-8']);
         $result = $client->PaymentVerification($data);
+        ww($result);
 
         if ($result->Status != 100) {
             $message = $this->translateStatus($result->Status);
