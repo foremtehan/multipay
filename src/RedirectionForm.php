@@ -186,8 +186,6 @@ class RedirectionForm implements JsonSerializable
      */
     public function toJson($options = JSON_UNESCAPED_UNICODE)
     {
-        $this->sendJsonHeader();
-
         $json = json_encode($this, $options);
 
         if (json_last_error() != JSON_ERROR_NONE) {
